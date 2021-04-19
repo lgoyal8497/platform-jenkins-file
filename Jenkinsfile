@@ -4,7 +4,9 @@ pipeline {
   agent any
  
   tools {maven "MyMaven" 
-         nodejs "nodejs" }
+         nodejs "nodejs"
+         docker "myDocker"
+       }
   
   parameters {
         string(name: 'url', defaultValue: 'https://github.com/tapasmishraarc/SpringbootdemoPOC.git', description: 'My application url')
